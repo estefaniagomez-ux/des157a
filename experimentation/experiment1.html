@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>experiment 1</title>
+</head>
+<body>
+    <h1>look in the console to see the results</h1>
+
+    <script>
+        // making h capital and reversing letters
+// sequence
+        var myText = "happy horse";
+        var newString = '';
+        var reversed = myText.split("").reverse().join(""); 
+
+        console.log(myText); 
+        // selection making h capital
+        for (var i=0; i<myText.length;i++){
+            if (myText [i] === 'h') {
+                console.log(myText[i]);
+                newString += myText[i].toUpperCase();
+            }
+            else {
+                newString +=myText[i];
+            }
+            // reverse and the new uppercase
+        }
+        console.log(newString + reversed);
+
+        // class example
+/*         //sequence step 1
+        var myText = "she sells sea shells";
+        //sequence step 2
+        var newString = '';
+        //sequence step 3
+        console.log(myText);
+
+        //sequence step 4 run a loop
+        for (var i=0; i<myText.length; i++){
+            //sequence step 5 have a selection
+            if (myText [i] === 'e'){
+                console.log(myText[i]);
+                newString += myText[i].toUpperCase();
+            }
+            else {
+                newString += myText[i];
+            }
+        }
+        //sequence step 6 print out final string
+        console.log(newString); */
+    </script>
+    
+</body>
+</html>
