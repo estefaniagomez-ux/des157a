@@ -1,0 +1,161 @@
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #1a1a1a;
+  background-color: #fafafa;
+}
+
+header {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 2.5rem 0 2rem;
+  margin-bottom: 3rem;
+}
+
+.header-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.25rem;
+}
+
+header .subtitle {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+header nav a {
+  font-size: 0.8125rem;
+  color: #555;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+}
+
+header nav a:hover {
+  color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+article {
+  margin-bottom: 4rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.post-meta time {
+  font-size: 0.75rem;
+  color: #aaa;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.post-meta .tag {
+  font-size: 0.6875rem;
+  color: #777;
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+article h2 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+article p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: #444;
+  max-width: 62ch;
+  margin-bottom: 1rem;
+}
+
+
+.article-link {
+  display: inline-block;
+  font-size: 0.8125rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 1px;
+  margin-top: 0.75rem;
+}
+
+.article-link:hover {
+  color: #555;
+  border-color: #555;
+}
+
+
+.form-example {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+}
+
+.form-example h3 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.form-example p {
+  font-size: 0.875rem;
+  color: #555;
+  max-width: 58ch;
+  margin-bottom: 0.75rem;
+}
+
+.form-example a {
+  font-size: 0.8125rem;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 1px;
+}
+
+.form-example a:hover {
+  color: #555;
+  border-color: #555;
+}
+
+/* === Footer === */
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 1.5rem 2rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: #bbb;
+}
