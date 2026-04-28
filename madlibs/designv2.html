@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo-Cascadia Street Race // Mad Libs</title>
+
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <p class="header-tag">THE RACE</p>
+    <h1>
+      <span class="glitch" data-text="STREET">STREET</span>
+      <span class="glitch accent" data-text="RACE">RACE</span>
+      <span class="glitch" data-text="2099">3012</span>
+    </h1>
+  </header>
+
+  <main>
+    <section class="page-columns">
+
+      <!-- form -->
+      <section class="form-panel">
+        <p class="form-intro">Fill in the blanks.</p>
+        <form id="madlib-form">
+
+          <div class="input-group">
+            <label for="racer-name">Name #1:</label>
+            <input type="text" id="racer-name" placeholder="e.g. Lightning McQueen" required />
+          </div>
+
+          <div class="input-group">
+            <label for="vehicle">Vehicle type:</label>
+            <input type="text" id="vehicle" placeholder="e.g. Motorcycle" required />
+          </div>
+
+          <div class="input-group">
+            <label for="adjective1">Adjective:</label>
+            <input type="text" id="adjective1" placeholder="e.g. Blinding" required />
+          </div>
+
+          <div class="input-group">
+            <label for="city-district">City:</label>
+            <input type="text" id="city-district" placeholder="e.g. San Francisco" required />
+          </div>
+
+          <div class="input-group">
+            <label for="rival-name">Name #2:</label>
+            <input type="text" id="rival-name" placeholder="e.g. Jackson Storm" required />
+          </div>
+
+          <div class="input-group">
+            <label for="sound">Sound effect:</label>
+            <input type="text" id="sound" placeholder="e.g. BEEP" required />
+          </div>
+
+          <div class="input-group">
+            <label for="adjective2">Adjective:</label>
+            <input type="text" id="adjective2" placeholder="e.g. Glowing" required />
+          </div>
+
+          <div class="input-group">
+            <label for="emotion">An emotion:</label>
+            <input type="text" id="emotion" placeholder="e.g. Ecstatic" required />
+          </div>
+
+          <a href="#result-overlay" class="submit-btn">→ RUN THE RACE</a>
+
+        </form>
+      </section>
+
+      <!-- image -->
+      <section class="image-panel">
+        <img
+          src="images/neo-cascadia.png"
+          alt="cool car"
+          width="480"
+          height="300"
+        />
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Result overlay -->
+  <section class="result-overlay" id="result-overlay">
+    <article class="result-card">
+      <h2>Race Story:</h2>
+      <p class="story">
+        The streets of <strong class="user-word">[district]</strong> hummed with corrupted neon
+        as <strong class="user-word">[racer alias]</strong> fired up their
+        <strong class="user-word">[vehicle]</strong>.
+        The engine screamed — a <strong class="user-word">[adjective]</strong> roar that split the acid rain.
+        <br /><br />
+        Ahead, the infamous <strong class="user-word">[rival]</strong> cut into the lane,
+        chrome panels scraping sparks off the guardrail.
+        <strong>"<span class="user-word">[sound]</span>!"</strong>
+        — the echo tore through every AR feed in the city.
+        <br /><br />
+        But <strong class="user-word">[racer alias]</strong> didn't blink.
+        They punched the throttle, crossed the <strong class="user-word">[adjective]</strong> finish line,
+        and felt <strong class="user-word">[emotion]</strong> — like a ghost finally touching the grid.
+      </p>
+      <a href="#" class="close-btn">RACE AGAIN</a>
+    </article>
+  </section>
+
+</body>
+</html>
