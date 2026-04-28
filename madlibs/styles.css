@@ -35,7 +35,7 @@ body {
   min-height: 100vh;
 }
 
-/* ---- HEADER ---- */
+/* ---- header ---- */
 header {
   padding: 16px 36px 12px;
   border-bottom: 1px solid var(--border);
@@ -60,7 +60,7 @@ header h1 {
   animation: flicker 6s infinite;
 }
 
-/* ---- GLITCH ---- */
+/* ---- glitch stuff  ---- */
 .glitch {
   color: var(--neon-cyan);
   position: relative;
@@ -121,12 +121,12 @@ header h1 {
   46%      { opacity: 1; }
 }
 
-/* ---- MAIN ---- */
+/* ---- main ---- */
 main {
   padding: 16px 36px 24px;
 }
 
-/* ---- TWO-COLUMN LAYOUT ---- */
+/* ---- two columns  ---- */
 .page-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -134,7 +134,7 @@ main {
   align-items: start;
 }
 
-/* ---- FORM PANEL ---- */
+/* ---- form panel ---- */
 .form-intro {
   font-size: 10px;
   color: var(--text-dim);
@@ -255,7 +255,6 @@ input[type="text"]:valid:not(:placeholder-shown) {
   opacity: 0.85;
 }
 
-/* ---- RESULT OVERLAY — :target trick ---- */
 .result-overlay {
   position: fixed;
   inset: 0;
@@ -275,7 +274,6 @@ input[type="text"]:valid:not(:placeholder-shown) {
   pointer-events: all;
 }
 
-/* ---- RESULT CARD ---- */
 .result-card {
   background: var(--bg2);
   border: 1px solid var(--neon-cyan);
