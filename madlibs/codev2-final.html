@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neo-Cascadia Street Race // Mad Libs</title>
+
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <p class="header-tag">THE RACE</p>
+    <h1>
+      <span class="glitch" data-text="STREET">STREET</span>
+      <span class="glitch accent" data-text="RACE">RACE</span>
+      <span class="glitch" data-text="3012">3012</span>
+    </h1>
+  </header>
+
+  <main>
+    <section class="page-columns">
+
+      <!-- form -->
+      <section class="form-panel">
+        <p class="form-intro">Fill in the blanks.</p>
+        <form id="madlib-form" novalidate>
+
+          <div class="input-group">
+            <label for="racer-name">Name #1:</label>
+            <input type="text" id="racer-name" placeholder="e.g. Lightning McQueen" />
+            <span class="error-msg" id="err-racer-name">⚠ Enter a name to continue.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="vehicle">Vehicle type:</label>
+            <input type="text" id="vehicle" placeholder="e.g. Motorcycle" />
+            <span class="error-msg" id="err-vehicle">⚠ Enter a vehicle type.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="adjective1">Adjective:</label>
+            <input type="text" id="adjective1" placeholder="e.g. Blinding" />
+            <span class="error-msg" id="err-adjective1">⚠ Enter an adjective.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="city-district">City:</label>
+            <input type="text" id="city-district" placeholder="e.g. San Francisco" />
+            <span class="error-msg" id="err-city-district">⚠ Enter a city name.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="rival-name">Name #2:</label>
+            <input type="text" id="rival-name" placeholder="e.g. Jackson Storm" />
+            <span class="error-msg" id="err-rival-name">⚠ Enter a rival name.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="sound">Sound effect:</label>
+            <input type="text" id="sound" placeholder="e.g. BEEP" />
+            <span class="error-msg" id="err-sound">⚠ Enter a sound effect.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="adjective2">Adjective:</label>
+            <input type="text" id="adjective2" placeholder="e.g. Glowing" />
+            <span class="error-msg" id="err-adjective2">⚠ Enter an adjective.</span>
+          </div>
+
+          <div class="input-group">
+            <label for="emotion">An emotion:</label>
+            <input type="text" id="emotion" placeholder="e.g. Ecstatic" />
+            <span class="error-msg" id="err-emotion">⚠ Enter an emotion.</span>
+          </div>
+
+          <button type="submit" class="submit-btn">→ RUN THE RACE</button>
+
+        </form>
+      </section>
+
+      <!-- image -->
+      <section class="image-panel">
+        <img
+          src="images/racecar.jpg"
+          alt="A futuristic race car speeding through neon-lit city streets"
+          width="480"
+          height="300"
+        />
+      </section>
+
+    </section>
+  </main>
+
+  <!-- Result overlay -->
+  <div class="result-overlay" id="result-overlay" aria-hidden="true">
+    <article class="result-card">
+      <h2>Race Story:</h2>
+      <p class="story">
+        The streets of <strong class="user-word" id="out-district">[district]</strong> hummed with corrupted neon
+        as <strong class="user-word" id="out-racer1">[racer alias]</strong> fired up their
+        <strong class="user-word" id="out-vehicle">[vehicle]</strong>.
+        The engine screamed — a <strong class="user-word" id="out-adj1">[adjective]</strong> roar that split the acid rain.
+        <br /><br />
+        Ahead, the infamous <strong class="user-word" id="out-rival">[rival]</strong> pulled up, 
+        chrome panels scraping sparks off the guardrail.
+        <strong>"<span class="user-word" id="out-sound">[sound]</span>!"</strong>
+        — the echo tore through the city.
+        <br /><br />
+        But <strong class="user-word" id="out-racer2">[racer alias]</strong> didn't blink.
+        They punched the throttle, crossed the <strong class="user-word" id="out-adj2">[adjective]</strong> finish line,
+        and felt <strong class="user-word" id="out-emotion">[emotion]</strong> — like a ghost finally touching the grid.
+      </p>
+      <button class="close-btn" id="close-btn">RACE AGAIN</button>
+    </article>
+  </div>
+
+</body>
+</html>

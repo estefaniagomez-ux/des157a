@@ -1,15 +1,14 @@
-
-
 :root {
-  --bg:          #06080f;
-  --bg2:         #0c1120;
-  --panel:       #0f1829;
-  --border:      #1a2a45;
-  --neon-cyan:   #00f5ff;
-  --neon-pink:   #ff2d78;
-  --neon-yellow: #f7ff00;
-  --text:        #c8d8f0;
-  --text-dim:    #4a6080;
+  --bg:           #06080f;
+  --bg2:          #0c1120;
+  --panel:        #0f1829;
+  --border:       #1a2a45;
+  --neon-cyan:    #00f5ff;
+  --neon-pink:    #ff2d78;
+  --neon-yellow:  #f7ff00;
+  --text:         #c8d8f0;
+  --text-dim:     #4a6080;
+  --error:        #ff2d78;
   --font-display: 'Orbitron', monospace;
   --font-mono:    'Share Tech Mono', monospace;
 }
@@ -60,7 +59,7 @@ header h1 {
   animation: flicker 6s infinite;
 }
 
-/* ---- glitch stuff  ---- */
+/* ---- glitch ---- */
 .glitch {
   color: var(--neon-cyan);
   position: relative;
@@ -126,7 +125,7 @@ main {
   padding: 16px 36px 24px;
 }
 
-/* ---- two columns  ---- */
+/* ---- two columns ---- */
 .page-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -188,11 +187,25 @@ input[type="text"]:focus {
   box-shadow: 0 0 0 2px rgba(0, 245, 255, 0.07), 0 4px 14px rgba(0, 245, 255, 0.1);
 }
 
-input[type="text"]:valid:not(:placeholder-shown) {
-  border-color: rgba(0, 245, 255, 0.45);
+input.input-error {
+  border-color: var(--error);
+  box-shadow: 0 0 8px rgba(255, 45, 120, 0.3);
 }
 
-/* ---- SUBMIT BUTTON ---- */
+/* ---- inline error messages ---- */
+.error-msg {
+  display: none;
+  font-size: 10px;
+  color: var(--error);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 6px rgba(255, 45, 120, 0.5);
+}
+
+.error-msg.visible {
+  display: block;
+}
+
+/* ---- submit button ---- */
 .submit-btn {
   display: inline-block;
   margin-top: 10px;
@@ -202,7 +215,8 @@ input[type="text"]:valid:not(:placeholder-shown) {
   letter-spacing: 0.18em;
   color: var(--bg);
   background: var(--neon-cyan);
-  text-decoration: none;
+  border: none;
+  cursor: pointer;
   padding: 10px 22px;
   clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
   transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
@@ -218,7 +232,7 @@ input[type="text"]:valid:not(:placeholder-shown) {
   transform: translateY(1px);
 }
 
-/* ---- IMAGE PANEL ---- */
+/* ---- image panel ---- */
 .image-panel {
   border: 1px solid var(--border);
   background: var(--panel);
@@ -255,6 +269,7 @@ input[type="text"]:valid:not(:placeholder-shown) {
   opacity: 0.85;
 }
 
+/* ---- result overlay ---- */
 .result-overlay {
   position: fixed;
   inset: 0;
@@ -269,7 +284,7 @@ input[type="text"]:valid:not(:placeholder-shown) {
   transition: opacity 0.35s ease;
 }
 
-.result-overlay:target {
+.result-overlay.active {
   opacity: 1;
   pointer-events: all;
 }
@@ -286,14 +301,6 @@ input[type="text"]:valid:not(:placeholder-shown) {
     100% 18px, 100% 100%,
     18px 100%, 0 100%
   );
-}
-
-.result-label {
-  font-size: 9px;
-  color: var(--neon-pink);
-  letter-spacing: 0.2em;
-  margin-bottom: 6px;
-  text-shadow: 0 0 8px var(--neon-pink);
 }
 
 .result-card h2 {
@@ -317,6 +324,7 @@ input[type="text"]:valid:not(:placeholder-shown) {
   font-weight: bold;
 }
 
+/* ---- close button ---- */
 .close-btn {
   display: inline-block;
   margin-top: 20px;
@@ -327,7 +335,7 @@ input[type="text"]:valid:not(:placeholder-shown) {
   background: transparent;
   border: 1px solid var(--neon-cyan);
   padding: 8px 18px;
-  text-decoration: none;
+  cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 
