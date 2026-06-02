@@ -25,10 +25,10 @@
       <p>There are two players: Alice and The Queen of Hearts. The player whose turn it is rolls two dice. If either die shows a one, the Cheshire Cat sneaks in and steals the turn and is immediately passed to the other player. If both dice show ones (Caterpillar eyes), the current player's entire score is wiped to zero. Very bad news. After each roll (assuming no ones were rolled), the current player can choose to roll again or pass to the other player if they're feeling cautious. The first player to reach 30 points or higher wins.</p>
     </article>
 
-    <!-- main play area -->
+    <!-- main game area -->
     <section class="play-area">
 
-      <!-- player 1: Alice -->
+      <!-- Alice -->
       <aside class="player" id="player-alice">
         <div class="player-portrait">
           <!-- placeholder: replace src with images/alice.png when drawn -->
@@ -38,7 +38,7 @@
         <p class="player-score" id="score-p1">0</p>
       </aside>
 
-      <!-- center column: game state + dice + actions -->
+      <!-- game state + dice + actions -->
       <section class="center-col">
         <!-- professor's #gamecontrol: start button / quit button -->
         <div id="gamecontrol">
@@ -46,13 +46,13 @@
           <button id="startgame">Start</button>
         </div>
 
-        <!-- professor's #game: current player prompt + dice images -->
+        <!-- current player prompt + dice images -->
         <div id="game"></div>
 
-        <!-- professor's #actions: roll / roll again / pass buttons -->
+        <!-- roll / roll again / pass buttons -->
         <div id="actions"></div>
 
-        <!-- professor's #score: running score display + win message -->
+        <!-- running score display + win message -->
         <div id="score"></div>
       </section>
 
