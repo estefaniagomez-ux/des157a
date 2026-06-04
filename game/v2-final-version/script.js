@@ -7,6 +7,10 @@
     const score       = document.querySelector('#score');
     const actionArea  = document.querySelector('#actions');
 
+    // sounds
+    const buttonSound = new Audio('sounds/buttonsound.mp3');
+    const meowSound   = new Audio('sounds/meow.mp3');
+
     const gameData = {
         dice:    ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'],
         players: ['Alice', 'The Queen of Hearts'],
@@ -43,7 +47,9 @@
         game.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}!</p>`;
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
 
-        document.querySelector('#roll').addEventListener('click', function () {
+        document.querySelector('#roll').addEventListener('mousedown', function () {
+            buttonSound.currentTime = 0;
+            buttonSound.play();
             throwDice();
         });
     }
@@ -87,11 +93,11 @@
                 <button id="rollagain">Roll Again</button>
                 <button id="pass">Pass</button>`;
 
-            document.querySelector('#rollagain').addEventListener('click', function () {
+            document.querySelector('#rollagain').addEventListener('mousedown', function () {
                 throwDice();
             });
 
-            document.querySelector('#pass').addEventListener('click', function () {
+            document.querySelector('#pass').addEventListener('mousedown', function () {
                 switchPlayer();
                 setUpTurn();
             });
@@ -100,7 +106,7 @@
         }
     }
 
-    // ── checkWinningCondition ─────────────────────────────
+    //  checkWinningCondition
     function checkWinningCondition() {
         if (gameData.score[gameData.index] > gameData.gameEnd) {
             score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with
@@ -110,8 +116,10 @@
         }
     }
 
-    // ── start ─────────────────────────────────────────────
-    startGame.addEventListener('click', function () {
+    //  start
+    startGame.addEventListener('mousedown', function () {
+        meowSound.currentTime = 0;
+        meowSound.play();
         gameData.index    = Math.round(Math.random());
         gameData.score    = [0, 0];
 
